@@ -42,6 +42,13 @@ class Person:
     def __str__(self):
         return f"{self.fname} {self.lname}"
 
+    def dues(self):
+        x = int(input("Enter your Emp ID:"))
+        if x == 101:
+            return f"Welcome {self.fname},your Dues is 20 Lakh Rupees"
+        else:
+            return f"Sorry i Dont Recognize you!!!"
+            
 class Student(Person):
     def __init__(self,fname,lname,year):
         super().__init__(fname, lname)
@@ -52,10 +59,19 @@ class Student(Person):
     def __str__(self):
         return f"{self.fname} \n{self.lname} \n{self.year}"
 
+    def dues(self):
+        x = int(input("Enter your Emp ID:"))
+        if x == 201:
+            return f"Welcome back {self.fname},your Dues is 20 Lakh Rupees,you have to pay by July {self.year}"
+        else:
+            return f"Sorry i Dont Recognize you!!!"
+
+    
 x = Person("Mike", "Olsen")
 y = Student("Jacob","Mathew",2024)
-print(x)
-print(y)
-print(y.lname)
+print(x.dues())
+print(y.dues())
+
+
 
 
