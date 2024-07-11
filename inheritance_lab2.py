@@ -30,3 +30,32 @@ myfamily1 = myfamily('Jacob','Shalini','Roshan')
 print(family1)
 print(myfamily1)
 
+
+#-------------------------------------------------------
+
+
+class Person:
+    def __init__(self, fname, lname):
+        self.fname = fname
+        self.lname = lname
+
+    def __str__(self):
+        return f"{self.fname} {self.lname}"
+
+class Student(Person):
+    def __init__(self,fname,lname,year):
+        super().__init__(fname, lname)
+        self.fname = fname
+        self.lname = lname
+        self.year = year
+    
+    def __str__(self):
+        return f"{self.fname} \n{self.lname} \n{self.year}"
+
+x = Person("Mike", "Olsen")
+y = Student("Jacob","Mathew",2024)
+print(x)
+print(y)
+print(y.lname)
+
+
