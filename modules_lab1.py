@@ -1,4 +1,11 @@
 def greeting(name):
   print("Hello, " + name)
 
-greeting('Jacob')
+greeting('Shalini')
+
+
+person1 = {
+  "name": "John",
+  "age": 339,
+  "country": "Norway"
+}
