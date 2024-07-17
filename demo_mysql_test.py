@@ -6,7 +6,7 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-mycursor.execute("select * from Customers;")
+mycursor.execute("SELECT CustomerName, City, Country FROM Customers;")
 myresult = mycursor.fetchall()
 
 for r in myresult:
