@@ -18,15 +18,30 @@ for x in mycursor:
 
 #Insert values in to the table customers #
 
-sql = "INSERT INTO customers (name, address,city) VALUES (%s, %s,%s)"
-val = ("John", "Highway 21",771)
-mycursor.execute(sql, val)
+#sql = "INSERT INTO customers (name, address,city) VALUES (%s, %s,%s)"
+"""
+val = [
+  ('Peter', 'Lowstreet 4',20),
+  ('Amy', 'Apple st 652',21),
+  ('Hannah', 'Mountain 21',23),
+  ('Michael', 'Valley 345',25),
+  ('Sandy', 'Ocean blvd 2',35),
+  ('Betty', 'Green Grass 1',67),
+  ('Richard', 'Sky st 331',78),
+  ('Susan', 'One way 98',98),
+  ('Vicky', 'Yellow Garden 2',27),
+  ('Ben', 'Park Lane 38',38),
+  ('William', 'Central st 954',54),
+  ('Chuck', 'Main Road 989',89),
+  ('Viola', 'Sideway 1633',63)]"""
 
-mydb.commit()
+#mycursor.executemany(sql, val)
 
-print(mycursor.rowcount, "record inserted.")
+#mydb.commit()
 
-mycursor.execute("Select * from customers")
+#print(mycursor.rowcount, "record inserted.")
+
+mycursor.execute("Select * from customers where name = 'Ben'")
 
 for y in mycursor:
     print(y)
